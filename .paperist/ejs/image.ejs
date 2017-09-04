@@ -1,6 +1,6 @@
 <%
 let onecolumn = false;
-if (config.hasOwnProperty('onecolumn')) {
+if (Object.prototype.hasOwnProperty.call(config, 'onecolumn')) {
   onecolumn = true;
   delete config.onecolumn;
 }
