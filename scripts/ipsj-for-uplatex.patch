@@ -1,0 +1,429 @@
+diff --git a/ipsj.cls b/ipsj.cls
+index 1880385..c7b832c 100644
+--- a/ipsj.cls
++++ b/ipsj.cls
+@@ -337,289 +337,6 @@
+ %% Font
+ %%
+ 
+-\ifDS@english
+-\else
+-%% 
+-\expandafter\let\csname JY1/mc/m/n/10\endcsname\relax
+-\expandafter\let\csname JY1/gt/m/n/10\endcsname\relax
+-%%%
+-\DeclareFontShape{JT1}{gt}{m}{it}{<-> ssub*gt/m/n}{}
+-\DeclareFontFamily{JT1}{mdg}{}
+-\DeclareFontShape{JT1}{mdg}{m}{n}{<-> ssub*gt/m/n}{}
+-\DeclareFontFamily{JT1}{gmb}{}
+-\DeclareFontShape{JT1}{gmb}{m}{n}{<-> ssub*gt/m/n}{}
+-\DeclareFontShape{JT1}{gmb}{bx}{n}{<-> ssub*gt/m/n}{}
+-\DeclareFontFamily{JT1}{sg}{}
+-\DeclareFontShape{JT1}{sg}{m}{n}{<-> ssub*gt/m/n}{}
+-\DeclareFontShape{JT1}{sg}{bx}{n}{<-> ssub*gt/m/n}{}
+-\DeclareFontFamily{JT1}{gbm}{}
+-\DeclareFontShape{JT1}{gbm}{m}{n}{<-> ssub*gt/m/n}{}
+-\DeclareFontShape{JT1}{gbm}{bx}{n}{<-> ssub*gt/m/n}{}
+-\DeclareFontFamily{JT1}{jun}{}
+-\DeclareFontShape{JT1}{jun}{b}{n}{<-> ssub*gt/m/n}{}
+-\DeclareFontShape{JT1}{jun}{m}{n}{<-> ssub*gt/m/n}{}
+-\DeclareFontShape{JT1}{jun}{bx}{n}{<-> ssub*gt/m/n}{}
+-\DeclareFontShape{JT1}{mc}{m}{it}{<-> ssub*mc/m/n}{}
+-\DeclareFontShape{JY1}{mc}{m}{it}{<-> ssub*mc/m/n}{}%% v1.4
+-%
+-\DeclareFontShape{JT1}{mc}{bx}{it}{<-> ssub*gt/m/n}{}%% v1.4
+-\DeclareFontShape{JY1}{mc}{bx}{it}{<-> ssub*gt/m/n}{}%% v1.4
+-
+-
+-%%%
+-\DeclareFontShape{JT1}{mc}{m}{sc}{<-> ssub*mc/m/n}{}
+-\DeclareFontShape{JY1}{mc}{m}{sc}{<-> ssub*mc/m/n}{}
+-
+-\DeclareFontShape{JY1}{mc}{m}{n}{<5>jis <6> jis
+- <7> s * [1.05571] jis
+- <8> s * [1.01625] jis
+- <9> s * [0.98556] jis
+- <10> s * [0.961] jis
+- <10.95> s * [0.94516] jis
+- <12> s * [0.98567] jis
+- <14.4> s * [0.92406] jis
+- <17.28> s * [0.85561] jis
+- <20.74> s * [0.88545] jis
+- <24.88> s * [0.9508] jis 
+- <-> jis
+- }{}
+-%
+-\DeclareFontShape{JY1}{gt}{m}{n}{<5>jisg <6> jisg
+- <7> s * [1.05571] jisg 
+- <8> s * [1.01625] jisg 
+- <9> s * [0.98556] jisg
+- <10> s * [0.961] jisg
+- <10.95> s * [0.94516] jisg
+- <12> s * [0.98567] jisg
+- <14.4> s * [0.92406] jisg
+- <17.28> s * [0.85561] jisg
+- <20.74> s * [0.88545] jisg
+- <24.88> s * [0.9508] jisg  
+- <-> jisg
+- }{}
+-\fi
+-
+-
+-%
+-\DeclareFontShape{OT1}{cmr}{m}{n}%
+-     {<-5.5>   cmr5%
+-      <5.5-6.5>   cmr6%
+-      <6.5-7.5>   cmr7% 
+-      <7.5-8.5>   cmr8%
+-      <8.5-11.5>  cmr10%
+-      <11.5-16.5> cmr12%
+-      <16.5->   cmr17%
+-      }{}
+-\DeclareFontShape{OT1}{cmr}{m}{sl}%
+-     {  <-8.5>   cmsl8%
+-      <8.5-9.5>  cmsl9%
+-      <9.5-11.5> cmsl10%
+-      <11.5->    cmsl12%
+-      }{}
+-\DeclareFontShape{OT1}{cmr}{m}{it}%
+-     {%
+-      <-7.5>     cmti7%
+-      <7.5-8.5>  cmti8%
+-      <8.5-9.5>  cmti9%
+-      <9.5-11.5> cmti10%
+-      <11.5->    cmti12%
+-      }{}
+-\DeclareFontShape{OT1}{cmr}{m}{sc}%
+-     {%
+-      <->cmcsc10%
+-      }{}
+-\DeclareFontShape{OT1}{cmr}{m}{ui}
+-     {%
+-      <-> cmu10%
+-      }{}
+-%%%%%%% bold series
+-\DeclareFontShape{OT1}{cmr}{b}{n}
+-     {%
+-      <-> cmb10%
+-      }{}
+-%%%%%%%% bold extended series
+-\DeclareFontShape{OT1}{cmr}{bx}{n}
+-   {%
+-      <-5.5>     cmbx5
+-      <5.5-6.5>  cmbx6
+-      <6.5-7.5>  cmbx7
+-      <7.5-8.5>  cmbx8
+-      <8.5-9.5>  cmbx9%
+-      <9.5-11.5> cmbx10%
+-      <11.5->    cmbx12%
+-      }{}
+-\DeclareFontShape{OT1}{cmr}{bx}{sl}
+-      {%
+-      <-> cmbxsl10%
+-      }{}
+-\DeclareFontShape{OT1}{cmr}{bx}{it}
+-      {%
+-      <-> cmbxti10%
+-      }{}
+-\DeclareFontShape{OT1}{cmr}{bx}{ui}
+-      {<->sub*cmr/m/ui}{}
+-%OMScmsy
+-\DeclareFontShape{OMS}{cmsy}{m}{n}{%
+-      <-5.5>    cmsy5
+-      <5.5-6.5> cmsy6
+-      <6.5-7.5> cmsy7
+-      <7.5-8.5> cmsy8
+-      <8.5-9.5> cmsy9
+-      <9.5->    cmsy10%
+-      }{}
+-\DeclareFontShape{OMS}{cmsy}{b}{n}{%
+-      <-5.5>    cmbsy5
+-      <5.5-6.5> cmbsy6
+-      <6.5-7.5> cmbsy7
+-      <7.5-8.5> cmbsy8
+-      <8.5-9.5> cmbsy9
+-      <9.5->    cmbsy10%
+-      }{}
+-%OMXcmex
+-\DeclareFontShape{OMX}{cmex}{m}{n}{%
+-   <-> cmex10%
+-   }{}
+-%OMLcmmi
+-\DeclareFontShape{OML}{cmm}{m}{it}%
+-     {<-5.5>    cmmi5
+-      <5.5-6.5> cmmi6
+-      <6.5-7.5> cmmi7
+-      <7.5-8.5> cmmi8
+-      <8.5-9.5> cmmi9%
+-      <9.5-11.5>cmmi10%
+-      <11.5->   cmmi12%
+-      }{}
+-\DeclareFontShape{OML}{cmm}{b}{it}{%
+-      <-5.5>    cmmib5
+-      <5.5-6.5> cmmib6
+-      <6.5-7.5> cmmib7
+-      <7.5-8.5> cmmib8
+-      <8.5-9.5> cmmib9%
+-      <9.5->    cmmib10%
+-      }{}
+-\DeclareFontShape{OML}{cmm}{bx}{it}%
+-   {<->ssub*cmm/b/it}{}
+-%%OT1cmtt
+-\DeclareFontShape{OT1}{cmtt}{m}{n}
+-     {%
+-      <-8.5>     cmtt8
+-      <8.5-9.5>  cmtt9%
+-      <9.5-11.5> cmtt10%
+-      <11.5->    cmtt12%
+-      }{}
+-%%%%%% make sure subst shapes are available
+-\DeclareFontShape{OT1}{cmtt}{m}{it}
+-     {%
+-      <-> cmitt10%
+-      }{}
+-\DeclareFontShape{OT1}{cmtt}{m}{sl}
+-     {%
+-      <-> cmsltt10%
+-      }{}
+-\DeclareFontShape{OT1}{cmtt}{m}{sc}
+-     {%
+-      <-> cmtcsc10%
+-      }{}
+-\DeclareFontShape{OT1}{cmtt}{m}{ui}
+-  {<->ssub*cmtt/m/it}{}
+-\DeclareFontShape{OT1}{cmtt}{bx}{n}
+-  {<->ssub*cmtt/m/n}{}
+-\DeclareFontShape{OT1}{cmtt}{bx}{it}
+-  {<->ssub*cmtt/m/it}{}
+-\DeclareFontShape{OT1}{cmtt}{bx}{ui}
+-  {<->ssub*cmtt/m/it}{}
+-%umsa
+-\DeclareFontFamily{U}{msa}{}
+-\DeclareFontShape{U}{msa}{m}{n}{
+-  <   -5.5> msam5
+-  <5.5-6.5> msam6
+-  <6.5-7.5> msam7
+-  <7.5-8.5> msam8
+-  <8.5-9.5> msam9
+-  <9.5-    > msam10
+-  }{}
+-\DeclareFontFamily{U}{msb}{}
+-\DeclareFontShape{U}{msb}{m}{n}{
+-  <   -5.5> msbm5
+-  <5.5-6.5> msbm6
+-  <6.5-7.5> msbm7
+-  <7.5-8.5> msbm8
+-  <8.5-9.5> msbm9
+-  <9.5-    > msbm10
+-  }{}
+-
+-\DeclareFontShape{OT1}{cmss}{m}{n}
+-     {%
+-      <-8.5>cmss8%
+-      <8.5-9.5>cmss9%
+-      <9.5-11.5>cmss10%
+-      <11.5-16.5>cmss12%
+-      <16.5->cmss17%
+-      }{}
+-\DeclareFontShape{OT1}{cmss}{m}{it}
+-      {<->sub*cmss/m/sl}{}
+-\DeclareFontShape{OT1}{cmss}{m}{sl}
+-    {%
+-      <-8.5>cmssi8
+-      <8.5-9.5>cmssi9%
+-      <9.5-11.5>cmssi10%
+-      <11.5-16.5>cmssi12%
+-      <16.5->cmssi17%
+-      }{}
+-\DeclareFontShape{OT1}{cmss}{m}{sc}
+-       {<->sub*cmr/m/sc}{}
+-\DeclareFontShape{OT1}{cmss}{m}{ui}
+-       {<->sub*cmr/m/ui}{}
+-\DeclareFontShape{OT1}{cmss}{sbc}{n}
+-     {%
+-      <->cmssdc10%
+-     }{}
+-\DeclareFontShape{OT1}{cmss}{bx}{n}
+-     {%
+-      <->cmssbx10%
+-      }{}
+-\DeclareFontShape{OT1}{cmss}{bx}{ui}
+-       {<->sub*cmr/bx/ui}{}
+-%%for latexsym
+-\DeclareFontFamily{U}{lasy}{}
+-\DeclareFontShape{U}{lasy}{m}{n}{
+- <   -5.5>lasy5
+- <5.5-6.5>lasy6
+- <6.5-7.5>lasy7
+- <7.5-8.5>lasy8
+- <8.5-9.5>lasy9
+- <9.5-    >lasy10  }{}
+-\DeclareFontShape{U}{lasy}{b}{n}{ 
+-     <  -10> ssub * lasy/m/n
+-     <10-  > lasyb10  }{}
+-%%%
+-
+-
+-
+-\ifDS@english
+-\else
+-%% FutoGo
+- \DeclareFontFamily{JY1}{fgb}{}
+- \DeclareFontShape{JY1}{fgb}{m}{n}{%
+- <-14> s *[0.961] FutoGoB101-Bold-J.tfm%
+- <14-> s *[1] FutoGoB101-Bold-J.tfm%
+- }{}
+- \DeclareFontFamily{JT1}{fgb}{}
+- \DeclareFontShape{JT1}{fgb}{m}{n}{%
+- <-> s *tmin10%
+- }{}
+-
+-%% FutoMin
+- \DeclareFontFamily{JY1}{fmb}{}
+- \DeclareFontShape{JY1}{fmb}{m}{n}{%
+- <-14> s *[0.961] FutoMinA101-Bold-J.tfm%
+- <14-> s *[1] FutoMinA101-Bold-J.tfm%
+- }{}
+- \DeclareFontFamily{JT1}{fmb}{}
+- \DeclareFontShape{JT1}{fmb}{m}{n}{%
+- <-> s *tmin10%
+- }{}
+-\fi
+ 
+ 
+ \DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
+@@ -1192,7 +909,7 @@ Electronic Preprint for Journal of Information Processing%
+ }
+ 
+ 
+-\def\HeadfontJ{\fontsize{12\JQ}{0\h}\bfseries\selectfont}
++\def\HeadfontJ{\fontsize{12\JQ}{0\h}\gtfamily\bfseries\selectfont}
+ 
+ \def\DOIHeadfont{\fontsize{11\Q}{0\h}%\usefont{OT1}{phv}{m}{n}\selectfont
+ \sffamily\selectfont}
+@@ -1213,10 +930,10 @@ Electronic Preprint for Journal of Information Processing%
+ 
+ \def\SHUBETUfontJ{%
+ \if@submit
+-\fontsize{18\JQ}{0\h}\usefont{JY1}{gt}{m}{n}%
++\fontsize{18\JQ}{0\h}%\usefont{JY1}{gt}{m}{n}%
+ \selectfont%
+ \else
+-\fontsize{18\JQ}{0\h}\usefont{JY1}{fgb}{m}{n}%
++\fontsize{18\JQ}{0\h}%\usefont{JY1}{fgb}{m}{n}%
+ \selectfont%
+ \fi
+ }
+@@ -2685,13 +2402,13 @@ Presently with\ %
+ \def\jtitlefont{%
+ \if@submit
+    \fontsize{26\JQ}{34\h}
+-   \usefont{JY1}{gt}{m}{n}%
++   %\usefont{JY1}{gt}{m}{n}%
+ %   \usefont{OT1}{ptm}{b}{n}%Times-Bold*
+-   \bfseries%
++   \mcfamily\bfseries%
+    \mathversion{bold}\selectfont%
+ \else
+    \fontsize{26\JQ}{34\h}
+-   \usefont{JY1}{fmb}{m}{n}% FutoMin
++   %\usefont{JY1}{fmb}{m}{n}% FutoMin
+    \usefont{OT1}{ptm}{b}{n}%Times-Bold*
+    \mathversion{bold}\selectfont%
+ \let\ddash\titleddash%
+@@ -2704,7 +2421,7 @@ Presently with\ %
+ \if@submit
+    \fontsize{10\JQ}{12\h}\normalfont\selectfont
+ \else
+-   \fontsize{10\JQ}{12\h}\usekanji{JY1}{gt}{m}{n}%
++   \fontsize{10\JQ}{12\h}%\usekanji{JY1}{gt}{m}{n}%
+    \useroman{OT1}{phv}{m}{n}\selectfont
+ \fi}
+ 
+@@ -2934,7 +2651,7 @@ Abstract:\hskip.5em%
+    \ifDS@abstract
+    {\hskip1zw}%
+    \else
+-{\textbf{概要}：}
++{\textgt{\textbf{概要}}：}
+    \fi
+ }
+ \fi
+@@ -3013,7 +2730,7 @@ Keywords:\hskip.5em%
+ Keywords:\hskip.5em%
+ }
+ \else
+-\def\JKEYWORD{\textbf{キーワード}：}%
++\def\JKEYWORD{\textgt{\textbf{キーワード}}：}%
+ \fi
+ 
+ 
+@@ -3739,7 +3456,7 @@ Keywords:\hskip.5em%
+ {.00001\Cvs}% \@plus.3\Cdp \@minus.2\Cdp}%
+ {\reset@font
+ \fontsize{16\JQ}{21\h}\selectfont%
+-\bfseries\mathversion{bold}%
++\gtfamily\bfseries\mathversion{bold}%
+ }}
+ %-----------
+ 
+@@ -3749,7 +3466,7 @@ Keywords:\hskip.5em%
+  \newcommand{\subsection}{\@startsectionC{subsection}{2}{\z@}%
+ {\Cvs}%{.3125\Cvs}%{.3125\Cvs \@plus.2\Cdp \@minus.5\Cdp}%
+ {.00001\Cvs}% \@plus.3\Cdp \@minus.2\Cdp}%   {.5\Cvs \@plus.3\Cdp}%
+-   {\reset@font\normalsize\bfseries\mathversion{bold}}}
++   {\reset@font\normalsize\gtfamily\bfseries\mathversion{bold}}}
+ 
+ 
+ %=======================%=======================
+@@ -3758,7 +3475,7 @@ Keywords:\hskip.5em%
+ \newcommand{\subsubsection}{\@startsectionC{subsubsection}{3}{\z@}%
+    {0.00001\Cvs}% \@plus.3\Cdp \@minus.2\Cdp}%{.5\Cvs \@plus.5\Cdp \@minus.2\Cdp}%
+    {0.00001\Cvs}% \@plus.3\Cdp \@minus.2\Cdp}%{.5\Cvs \@plus.3\Cdp}%
+-   {\reset@font\normalsize\bfseries\mathversion{bold}}}
++   {\reset@font\normalsize\gtfamily\bfseries\mathversion{bold}}}
+ 
+ 
+ %=======================%=======================
+@@ -3768,12 +3485,12 @@ Keywords:\hskip.5em%
+ \newcommand{\paragraph}{\@startsectionC{paragraph}{3}{\z@}%
+    {0.00001\Cvs}% \@plus.3\Cdp \@minus.2\Cdp}%
+    {0.00001\Cvs}% \@plus.3\Cdp \@minus.2\Cdp}%
+-   {\reset@font\normalsize\bfseries}}
++   {\reset@font\normalsize\gtfamily\bfseries}}
+ 
+ \newcommand{\subparagraph}{\@startsectionC{subparagraph}{3}{\z@}%
+    {0.00001\Cvs}% \@plus.3\Cdp \@minus.2\Cdp}%
+    {0.00001\Cvs}% \@plus.3\Cdp \@minus.2\Cdp}%
+-   {\reset@font\normalsize\bfseries}}
++   {\reset@font\normalsize\gtfamily\bfseries}}
+ 
+ 
+ %============================================================================
+@@ -5065,7 +4782,7 @@ Keywords:\hskip.5em%
+ {.00001\Cvs}% \@plus.3\Cdp \@minus.2\Cdp}%
+ {\reset@font
+ \fontsize{16\JQ}{21\h}\selectfont%
+-\bfseries\mathversion{bold}%
++\gtfamily\bfseries\mathversion{bold}%
+ }}%
+ %-----------
+ \section*{\appendixname}
+@@ -5353,7 +5070,7 @@ $\langle$\nobreak{#2}\nobreak$\rangle$}
+ \ifDS@english
+    \noindent{\bfseries{Editor's Recommendation}}\par
+ \else
+-   \noindent{\bfseries{推薦文}}\par%
++   \noindent{\gtfamily{\bfseries{推薦文}}}\par%
+ \fi
+ }{\par}%\vskip\baselineskip
+ 
+@@ -5366,7 +5083,7 @@ $\langle$\nobreak{#2}\nobreak$\rangle$}
+    {\bfseries{Acknowledgments}}%
+ \hskip1em\ignorespaces%
+ \else
+-   {\bfseries{謝辞}}%
++   {\gtfamily{\bfseries{謝辞}}}%
+ \hskip1\zw\ignorespaces%
+ \fi}
+ 

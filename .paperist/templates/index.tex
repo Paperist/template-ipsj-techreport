@@ -1,0 +1,92 @@
+\documentclass[dvipdfmx,uplatex,submit,techrep<%= flags.english.author ? "" : ",noauthor" %>]{ipsj}
+
+% Fix bugs for BibTeX
+\def\newblock{\hskip .11em plus .33em minus .07em}
+
+% Packages
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage[dvipdfm,pass]{geometry}
+
+% Hyperlink / URL
+\PassOptionsToPackage{hyphens}{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage{pxjahyper}
+
+% Cites
+\usepackage{cite}
+\makeatletter\def\NAT@parse{\typeout{}}\makeatother
+
+% Font configs
+\usepackage[deluxe]{otf}
+\usepackage[noalphabet,<%= fontpreset %>]{pxchfon}
+\usepackage[prefernoncjk]{pxcjkcat}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{fix-cm}
+
+% Codeblock
+\usepackage{fancyvrb}
+\DefineVerbatimEnvironment{verbatim}{Verbatim}{xleftmargin=.3in}
+
+\setcounter{年数}{<%= date.year %>}
+
+\begin{document}
+
+\title{<%= title.ja %>}
+
+<% if (title.en) { -%>
+\etitle{<%= title.en %>}
+<% } -%>
+
+<% for (affiliate of affiliates) { -%>
+<% if (affiliate.isPresent) { -%>\paffiliate<% } else { -%>\affiliate<% } -%>
+{<%= affiliate.id %>}{<%= affiliate.name.ja %><% if (affiliate.name.en) { %>\\<%= affiliate.name.en %><% } %>}
+<% } -%>
+
+<% for (author of authors) { -%>
+\author{<%= author.name.ja %>}{<%= author.name.en ? author.name.en : "" %>}{<%= author.affiliateIds.join(',') %>}<% if (author.email) { %>[<%= author.email %>]<% } %>
+<% } -%>
+
+\begin{abstract}
+\input{dist/abstract}
+\end{abstract}
+
+<% if (keywords && keywords.ja) { -%>
+\begin{jkeyword}
+<%= keywords.ja.join("，")%>
+\end{jkeyword}
+<% } -%>
+
+<% if (flags.english.abstract) { -%>
+\begin{eabstract}
+\input{dist/abstract.en}
+\end{eabstract}
+<% } -%>
+
+<% if (keywords && keywords.en) { -%>
+\begin{ekeyword}
+<%= keywords.en.join(", ")%>
+\end{ekeyword}
+<% } -%>
+
+\maketitle
+
+<%- body %>
+
+<% if (flags.acknowledgment) { -%>
+\begin{acknowledgment}
+\input{dist/acknowledgment}
+\end{acknowledgment}
+<% } -%>
+
+\bibliographystyle{ipsjunsrt}
+\bibliography{bibs/index}
+
+<% if (flags.appendix) { -%>
+\appendix
+\input{dist/appendix}
+<% } -%>
+
+\end{document}

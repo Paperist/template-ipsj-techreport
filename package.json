@@ -1,0 +1,35 @@
+{
+  "private": true,
+  "name": "@paperist/template-ipsj-techreport-uplatex",
+  "description": "IPSJ tech report template for Paperist with uplatex",
+  "author": "3846masa <3846masahiro+git@gmail.com>",
+  "license": "CC-BY-SA-4.0",
+  "homepage": "https://github.com/Paperist/template-ipsj-techreport-uplatex#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Paperist/template-ipsj-techreport-uplatex.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Paperist/template-ipsj-techreport-uplatex/issues"
+  },
+  "version": "0.0.0",
+  "scripts": {
+    "postinstall": "npm-run-all postinstall:fetch postinstall:copy",
+    "postinstall:copy": "postinstaller-for-template",
+    "postinstall:fetch": "node ./scripts/fetch-and-patch.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@paperist/postinstaller-for-template": "*",
+    "axios": "^0.16.2",
+    "diff": "^3.3.1",
+    "jszip": "^3.1.4",
+    "npm-run-all": "^4.1.1",
+    "remark-behead": "^2.0.1"
+  },
+  "devDependencies": {
+    "@types/diff": "^3.2.1",
+    "@types/jszip": "^0.0.33"
+  },
+  "keywords": []
+}

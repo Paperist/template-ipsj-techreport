@@ -1,0 +1,64 @@
+output: true
+plugins:
+  - ["remark-behead", { after: null, depth: 1 }]
+  - "@paperist/remark-latex"
+settings:
+  latex:
+    templatesDir: .paperist/ejs
+    imageConfigs:
+      width: 0.9\linewidth
+      height: 0.25\paperheight
+    documentInfo:
+      fontpreset: ipaex
+      flags:
+        acknowledgment: true
+        appendix: true
+        english:
+          author: true
+          abstract: true
+      title:
+        ja: 情報処理学会論文誌ジャーナル論文の準備方法\\（2012年10月12日版）
+        en: How to Prepare Your Paper for IPSJ Journal \\ (version 2012/10/12)
+      date:
+        year: 2017
+      keywords:
+        ja:
+          - 情報処理学会論文誌ジャーナル
+          - \LaTeX
+          - スタイルファイル
+          - べからず集
+        en:
+          - IPSJ Journal
+          - \LaTeX
+          - style files
+          - "``Dos and Dont's'' list"
+      affiliates:
+        - id: IPSJ
+          isPresent: false
+          name:
+            ja: 情報処理学会
+            en: IPSJ, Chiyoda, Tokyo 101--0062, Japan
+        - id: JU
+          isPresent: true
+          name:
+            ja: 情報処理大学
+            en: Johoshori Uniersity
+      authors:
+        - affiliateIds:
+            - IPSJ
+          name:
+            ja: 情報 太郎
+            en: Joho Taro
+          email: joho.taro@ipsj.or.jp
+        - affiliateIds:
+            - IPSJ
+          name:
+            ja: 処理 花子
+            en: Shori Hanako
+        - affiliateIds:
+            - IPSJ
+            - JU
+          name:
+            ja: 学会 次郎
+            en: Gakkai Jiro
+          email: gakkai.jiro@ipsj.or.jp
