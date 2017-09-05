@@ -1,5 +1,6 @@
 ### Templates ###
 .paperist/templates/*
+!.paperist/templates/*.patch
 !.paperist/templates/index.tex
 
 # Created by https://www.gitignore.io/api/node,tex
