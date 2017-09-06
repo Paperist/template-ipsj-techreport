@@ -42,6 +42,16 @@
 
 \setcounter{年数}{<%= date.year %>}
 
+<% if (flags.interaction) { -%>
+%% Remove header and nombre for interaction
+\makeatletter
+\pagestyle{empty}
+\def\@oddhead{}%
+\def\@evenhead{}%
+\def\ps@IPSJTITLEheadings{}
+\makeatother
+<% } -%>
+
 \begin{document}
 
 \title{<%= title.ja %>}

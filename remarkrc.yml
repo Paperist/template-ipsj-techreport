@@ -11,6 +11,7 @@ settings:
     documentInfo:
       fontpreset: ipaex
       flags:
+        interaction: false
         acknowledgment: true
         appendix: true
         english:
