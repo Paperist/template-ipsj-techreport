@@ -23,8 +23,18 @@
 \usepackage[prefernoncjk]{pxcjkcat}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{textcomp}
 \usepackage{lmodern}
 \usepackage{fix-cm}
+\cjkcategory{sym18}{cjk}
+\cjkcategory{sym19}{cjk}
+%% Use gothic as bold
+\makeatletter
+\DeclareRobustCommand\bfseries{%
+  \not@math@alphabet\bfseries\mathbfsf
+  \fontfamily\gtdefault\fontseries\bfdefault\selectfont
+}
+\makeatother
 
 % Codeblock
 \usepackage{fancyvrb}

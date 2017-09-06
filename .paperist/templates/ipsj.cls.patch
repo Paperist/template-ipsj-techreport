@@ -292,15 +292,6 @@ index 1880385..c7b832c 100644
  
  
  \DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
-@@ -1192,7 +909,7 @@ Electronic Preprint for Journal of Information Processing%
- }
- 
- 
--\def\HeadfontJ{\fontsize{12\JQ}{0\h}\bfseries\selectfont}
-+\def\HeadfontJ{\fontsize{12\JQ}{0\h}\gtfamily\bfseries\selectfont}
- 
- \def\DOIHeadfont{\fontsize{11\Q}{0\h}%\usefont{OT1}{phv}{m}{n}\selectfont
- \sffamily\selectfont}
 @@ -1213,10 +930,10 @@ Electronic Preprint for Journal of Information Processing%
  
  \def\SHUBETUfontJ{%
@@ -322,7 +313,7 @@ index 1880385..c7b832c 100644
 +   %\usefont{JY1}{gt}{m}{n}%
  %   \usefont{OT1}{ptm}{b}{n}%Times-Bold*
 -   \bfseries%
-+   \mcfamily\bfseries%
++   \bfseries\mcfamily%
     \mathversion{bold}\selectfont%
  \else
     \fontsize{26\JQ}{34\h}
@@ -338,92 +329,5 @@ index 1880385..c7b832c 100644
 -   \fontsize{10\JQ}{12\h}\usekanji{JY1}{gt}{m}{n}%
 +   \fontsize{10\JQ}{12\h}%\usekanji{JY1}{gt}{m}{n}%
     \useroman{OT1}{phv}{m}{n}\selectfont
- \fi}
- 
-@@ -2934,7 +2651,7 @@ Abstract:\hskip.5em%
-    \ifDS@abstract
-    {\hskip1zw}%
-    \else
--{\textbf{概要}：}
-+{\textgt{\textbf{概要}}：}
-    \fi
- }
- \fi
-@@ -3013,7 +2730,7 @@ Keywords:\hskip.5em%
- Keywords:\hskip.5em%
- }
- \else
--\def\JKEYWORD{\textbf{キーワード}：}%
-+\def\JKEYWORD{\textgt{\textbf{キーワード}}：}%
- \fi
- 
- 
-@@ -3739,7 +3456,7 @@ Keywords:\hskip.5em%
- {.00001\Cvs}% \@plus.3\Cdp \@minus.2\Cdp}%
- {\reset@font
- \fontsize{16\JQ}{21\h}\selectfont%
--\bfseries\mathversion{bold}%
-+\gtfamily\bfseries\mathversion{bold}%
- }}
- %-----------
- 
-@@ -3749,7 +3466,7 @@ Keywords:\hskip.5em%
-  \newcommand{\subsection}{\@startsectionC{subsection}{2}{\z@}%
- {\Cvs}%{.3125\Cvs}%{.3125\Cvs \@plus.2\Cdp \@minus.5\Cdp}%
- {.00001\Cvs}% \@plus.3\Cdp \@minus.2\Cdp}%   {.5\Cvs \@plus.3\Cdp}%
--   {\reset@font\normalsize\bfseries\mathversion{bold}}}
-+   {\reset@font\normalsize\gtfamily\bfseries\mathversion{bold}}}
- 
- 
- %=======================%=======================
-@@ -3758,7 +3475,7 @@ Keywords:\hskip.5em%
- \newcommand{\subsubsection}{\@startsectionC{subsubsection}{3}{\z@}%
-    {0.00001\Cvs}% \@plus.3\Cdp \@minus.2\Cdp}%{.5\Cvs \@plus.5\Cdp \@minus.2\Cdp}%
-    {0.00001\Cvs}% \@plus.3\Cdp \@minus.2\Cdp}%{.5\Cvs \@plus.3\Cdp}%
--   {\reset@font\normalsize\bfseries\mathversion{bold}}}
-+   {\reset@font\normalsize\gtfamily\bfseries\mathversion{bold}}}
- 
- 
- %=======================%=======================
-@@ -3768,12 +3485,12 @@ Keywords:\hskip.5em%
- \newcommand{\paragraph}{\@startsectionC{paragraph}{3}{\z@}%
-    {0.00001\Cvs}% \@plus.3\Cdp \@minus.2\Cdp}%
-    {0.00001\Cvs}% \@plus.3\Cdp \@minus.2\Cdp}%
--   {\reset@font\normalsize\bfseries}}
-+   {\reset@font\normalsize\gtfamily\bfseries}}
- 
- \newcommand{\subparagraph}{\@startsectionC{subparagraph}{3}{\z@}%
-    {0.00001\Cvs}% \@plus.3\Cdp \@minus.2\Cdp}%
-    {0.00001\Cvs}% \@plus.3\Cdp \@minus.2\Cdp}%
--   {\reset@font\normalsize\bfseries}}
-+   {\reset@font\normalsize\gtfamily\bfseries}}
- 
- 
- %============================================================================
-@@ -5065,7 +4782,7 @@ Keywords:\hskip.5em%
- {.00001\Cvs}% \@plus.3\Cdp \@minus.2\Cdp}%
- {\reset@font
- \fontsize{16\JQ}{21\h}\selectfont%
--\bfseries\mathversion{bold}%
-+\gtfamily\bfseries\mathversion{bold}%
- }}%
- %-----------
- \section*{\appendixname}
-@@ -5353,7 +5070,7 @@ $\langle$\nobreak{#2}\nobreak$\rangle$}
- \ifDS@english
-    \noindent{\bfseries{Editor's Recommendation}}\par
- \else
--   \noindent{\bfseries{推薦文}}\par%
-+   \noindent{\gtfamily{\bfseries{推薦文}}}\par%
- \fi
- }{\par}%\vskip\baselineskip
- 
-@@ -5366,7 +5083,7 @@ $\langle$\nobreak{#2}\nobreak$\rangle$}
-    {\bfseries{Acknowledgments}}%
- \hskip1em\ignorespaces%
- \else
--   {\bfseries{謝辞}}%
-+   {\gtfamily{\bfseries{謝辞}}}%
- \hskip1\zw\ignorespaces%
  \fi}
  
