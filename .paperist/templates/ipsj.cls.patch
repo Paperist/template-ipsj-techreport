@@ -313,7 +313,7 @@ index 1880385..c7b832c 100644
 +   %\usefont{JY1}{gt}{m}{n}%
  %   \usefont{OT1}{ptm}{b}{n}%Times-Bold*
 -   \bfseries%
-+   \bfseries\mcfamily%
++   \bfseries%\mcfamily%
     \mathversion{bold}\selectfont%
  \else
     \fontsize{26\JQ}{34\h}
