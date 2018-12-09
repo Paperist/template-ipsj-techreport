@@ -1,8 +1,6 @@
-diff --git a/ipsj.cls b/ipsj.cls
-index 1880385..c7b832c 100644
---- a/ipsj.cls
-+++ b/ipsj.cls
-@@ -337,289 +337,6 @@
+--- ipsj.cls	2018-12-09 13:52:46.068500900 +0900
++++ ipsj.new.cls	2018-12-09 13:55:36.493501500 +0900
+@@ -345,289 +345,6 @@
  %% Font
  %%
  
@@ -292,7 +290,7 @@ index 1880385..c7b832c 100644
  
  
  \DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
-@@ -1213,10 +930,10 @@ Electronic Preprint for Journal of Information Processing%
+@@ -1221,10 +938,10 @@
  
  \def\SHUBETUfontJ{%
  \if@submit
@@ -305,7 +303,7 @@ index 1880385..c7b832c 100644
  \selectfont%
  \fi
  }
-@@ -2685,13 +2402,13 @@ Presently with\ %
+@@ -2755,13 +2472,14 @@
  \def\jtitlefont{%
  \if@submit
     \fontsize{26\JQ}{34\h}
@@ -313,16 +311,17 @@ index 1880385..c7b832c 100644
 +   %\usefont{JY1}{gt}{m}{n}%
  %   \usefont{OT1}{ptm}{b}{n}%Times-Bold*
 -   \bfseries%
-+   \bfseries%\mcfamily%
++   \bfseries\mcfamily%
     \mathversion{bold}\selectfont%
  \else
     \fontsize{26\JQ}{34\h}
 -   \usefont{JY1}{fmb}{m}{n}% FutoMin
 +   %\usefont{JY1}{fmb}{m}{n}% FutoMin
++   \mcfamily
     \usefont{OT1}{ptm}{b}{n}%Times-Bold*
     \mathversion{bold}\selectfont%
  \let\ddash\titleddash%
-@@ -2704,7 +2421,7 @@ Presently with\ %
+@@ -2774,7 +2492,7 @@
  \if@submit
     \fontsize{10\JQ}{12\h}\normalfont\selectfont
  \else
