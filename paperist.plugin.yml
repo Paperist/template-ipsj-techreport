@@ -3,10 +3,10 @@ plugins:
 fetch:
   - url: https://www.ipsj.or.jp/journal/submit/9faeag0000001nsz-att/ipsj_v4.zip
     files:
-      - ipsj_v2/UTF8/ipsj.cls
-      - ipsj_v2/UTF8/ipsjpref.sty
-      - ipsj_v2/UTF8/ipsjsort-e.bst
-      - ipsj_v2/UTF8/ipsjsort.bst
-      - ipsj_v2/UTF8/ipsjtech.sty
-      - ipsj_v2/UTF8/ipsjunsrt-e.bst
-      - ipsj_v2/UTF8/ipsjunsrt.bst
+      - ipsj_v4/UTF8/ipsj.cls
+      - ipsj_v4/UTF8/ipsjpref.sty
+      - ipsj_v4/UTF8/ipsjsort-e.bst
+      - ipsj_v4/UTF8/ipsjsort.bst
+      - ipsj_v4/UTF8/ipsjtech.sty
+      - ipsj_v4/UTF8/ipsjunsrt-e.bst
+      - ipsj_v4/UTF8/ipsjunsrt.bst
